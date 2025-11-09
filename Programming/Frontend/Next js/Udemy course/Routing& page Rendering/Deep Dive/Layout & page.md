@@ -1,0 +1,2 @@
+- **`page.tsx`**: Defines the content of a specific route, acting as the main entry point for that page.
+- **`layout.tsx`**: Defines a shared structure (shell) around the page content, such as navigation, footers, or sidebars, and persists across navigations.

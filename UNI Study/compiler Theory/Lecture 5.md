@@ -1,0 +1,32 @@
+
+### Bottom - up parsing : - 
+- also knowns as shift-reduce parsing 
+- used to create a parse tree for an input string
+- parsing starts from input symbol and create the parse tree up to the start symbol by tracing out the rightmost derivations 
+- **Types**
+	- Shift reduce 
+		- operator precedence 
+		- table driven LR parsing
+- #### Shift Reduce :-
+	- process of reducing a string to the start symbol of a grammar
+	- use stack to hold the grammar and an input tape to hold the string
+	- in Shift process : current symbol of input string is pushed to a stack
+	- in Reduce process : symbol will be replaced by + non-terminal 
+	 > Note that : The symbol is the right side of the production and non-terminal is the left side of the production.
+	- ##### Operator precedence parsing :-  
+		- kind of shift-reduce parsing method 
+		- grammar said to be operator precedence when it applies 2 properties : -
+			- No product has a∈
+			- No 2 non-terminals are adjacent
+		-  it occurs only between terminals and ignore non-terminals
+		- **Parsing Action :-**
+			- for both ends of the give input string add $
+				-> Example: For input `id + id * id`, modify it to `$ id + id * id $`.
+			- scan string from left to the right until founding >
+				-> Example: `$ id ⋗ + id * id $`.
+			- scan towards left over all the equal precedence until the first leftmost < founded 
+				-> Example: `$ ⋖ id ⋗ + id * id $`.
+			- everything between leftmost < and > right most is handled
+				-> Example: `$ E + id * id $`.
+			- $ on $ means parsing is successful
+				-> Example `$ E $`

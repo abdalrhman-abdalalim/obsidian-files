@@ -1,0 +1,6 @@
+- In this pattern , multiple component work together as a cohesive unit . A parent component acts as a controller , while its child components interact with shared state and context.
+-  **Context :** is a way to manage state globally , it can be used together with the useState Hook to share state between deeply nested components more easily than with useState alone. [[Hooks]]
+- **Benefits** :
+	- enhance readability and modularity of complex UIs.
+	- Allows flexible APIs by exposing component for customization 
+	- Reduces the need for prop drilling through the use of React context
